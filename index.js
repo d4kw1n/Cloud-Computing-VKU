@@ -1,10 +1,15 @@
 const express = require('express');
-const app = express();
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const routes = require("./routes");
+const path = require('path');
+const connectDB = require("./db/connect");
+
+const app = express();
 
 dotenv.config();
+
+connectDB();
 
 app.use(express.static('./uploads'));
 app.use(bodyParser.json({ limit: '50mb' }));
