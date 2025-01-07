@@ -1,0 +1,17 @@
+{
+  "name": "computer-computing-vku",
+  "version": "1.0.0",
+  "description": "computer computing lab final for vku course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "computer-computing",
+    "mongodb",
+    "render"
+  ],
+  "author": "shr3wd",
+  "license": "ISC"
+}
