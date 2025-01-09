@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    title Bảng Dữ Liệu Sản Phẩm
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1(id='main-title') Bảng Dữ Liệu Sản Phẩm
+    table(id='data-table')
+      thead
+        tr
+          th STT
+          th Tên
+          th Giá
+          th Mô Tả
+          th Ảnh
+          th Trạng Thái
+          th Ngày Giờ Tạo
+      tbody
+        tr(id='product1')
+          td 1
+          td Điện Thoại iPhone 12
+          td $699
+          td Điện thoại thông minh Apple
+          td
+            img(src='https://example.com/iphone12.jpg', alt='iPhone 12')
+          td Còn hàng
+          td 2023-01-01 12:00:00
+        tr(id='product2')
+          td 2
+          td Máy tính bảng Samsung Galaxy Tab
+          td $399
+          td Máy tính bảng cấu hình cao
+          td
+            img(src='https://example.com/galaxytab.jpg', alt='Galaxy Tab')
+          td Hết hàng
+          td 2023-01-02 15:00:00
+        tr(id='product3')
+          td 3
+          td Laptop Dell XPS 13
+          td $999
+          td Laptop cao cấp với màn hình InfinityEdge
+          td
+            img(src='https://example.com/dellxps.jpg', alt='Dell XPS 13')
+          td Còn hàng
+          td 2023-01-03 18:30:00
