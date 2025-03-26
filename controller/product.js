@@ -8,7 +8,8 @@ const ProductController = {
                 name,
                 price,
                 description,
-                imageURL
+                imageURL,
+                status: true
             });
             await product.save();
             res.status(201).json(product);
