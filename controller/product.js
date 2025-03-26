@@ -3,12 +3,12 @@ const Product = require('../models/product');
 const ProductController = {
     createProduct: async (req, res) => {
         try {
-            const { name, price, description, imageURL } = req.body;
+            const { name, price, description, imageUrl } = req.body;
             const product = new Product({
                 name,
                 price,
                 description,
-                imageURL,
+                imageUrl,
                 status: true
             });
             await product.save();
