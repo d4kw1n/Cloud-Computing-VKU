@@ -54,6 +54,16 @@ const ProductController = {
         } catch (error) {
             res.status(400).json({ message: error.message });
         }
+    },
+
+    searchProduct: async (req, res) => {
+        try {
+            const { key } = req.query;
+            const products = await Product.find({ name: { $regex: key, $options: 'i' } });
+            res.status(200).json(products);
+        } catch (error) {
+            res.status(400).json({ message: error.message });
+        }
     }
 }
 

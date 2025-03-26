@@ -10,7 +10,7 @@ app.set('view engine', 'pug');
 app.set('views', './templates');
 dotenv.config();
 
-// connectDB();
+connectDB();
 
 app.use(express.static('./uploads'));
 app.use(bodyParser.json({ limit: '50mb' }));
@@ -31,6 +31,8 @@ app.get('/template', (req, res) => {
 app.get('/table', (req, res) => {
     res.render('table', { title: 'Danh sách sản phẩm', message: 'Danh sách sản phẩm' });
 });
+
+app.use('/api', require('./routes/api'));
 
 app.listen(process.env.PORT || 3000, () => {
     console.log(`[Server] Server is running on port ${process.env.PORT || 3000}, http://localhost:${process.env.PORT || 3000}`);
